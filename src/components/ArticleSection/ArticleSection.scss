@@ -1,0 +1,77 @@
+@use "../../scss/abstracts" as *;
+
+.article-section {
+  padding: 4.5rem 1.5rem;
+
+  @include mq(large) {
+    padding: 5.5rem 4rem 3.5rem;
+
+    &__grid {
+      @include grid(4, 1fr, 1.8rem);
+      font-size: 0.99rem;
+    }
+
+    &__title {
+      font-size: 1rem;
+    }
+  }
+
+  @include mq(extra-large) {
+    padding: 5.5rem 10.5rem 3.5rem;
+  }
+
+  &__heading {
+    font-size: 1.9rem;
+
+    @include mq(extra-large) {
+      font-size: $font-size3;
+    }
+  }
+
+  &__article {
+    background-color: $white;
+    margin-block: 1.7rem 2.5rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    text-align: left;
+    color: $grayish-blue;
+
+    @include mq(large) {
+      margin-block: 3rem 1.5rem;
+    }
+
+    &:hover {
+      .article-section__title {
+        color: $lime-green;
+      }
+    }
+  }
+
+  &__img {
+    min-height: 12.5rem;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__container {
+    padding: 1.5rem;
+
+    @include mq(large) {
+      padding: 1.5rem 1.2rem;
+    }
+  }
+
+  &__author {
+    font-size: 0.6rem;
+  }
+
+  &__title {
+    padding-block: 0.5rem;
+    @include hover-color;
+  }
+
+  &__text {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+}

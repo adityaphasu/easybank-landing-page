@@ -1,0 +1,63 @@
+@use "../../scss/abstracts" as *;
+
+.home {
+  padding: 0 0 5rem 0;
+  background-color: $very-light-gray;
+
+  @include mq(large) {
+    padding: 0;
+    @include flex(center, center);
+    flex-direction: row-reverse;
+  }
+
+  &__container {
+    background: url("/src/assets/bg-intro-mobile.svg") no-repeat top;
+    padding: 1rem;
+
+    @include mq(large) {
+      background: url("/src/assets/bg-intro-desktop.svg") no-repeat 13% 59%/ 171%;
+      width: 71%;
+      padding: 0;
+    }
+  }
+
+  &__img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: bottom;
+
+    @include mq(large) {
+      width: 80%;
+      transform: translate(12.1rem, 3.9rem) scale(1.28);
+      aspect-ratio: unset;
+    }
+  }
+
+  &__content {
+    padding: 1.1rem;
+
+    @include mq(large) {
+      width: 75%;
+      padding: 6rem 2rem 1rem 5rem;
+    }
+
+    @include mq(extra-large) {
+      width: 60%;
+      padding: 7rem 5rem 2rem 10rem;
+    }
+  }
+
+  &__heading {
+    font-size: $font-size3;
+    line-height: 1.25;
+    font-weight: $fw-400;
+
+    @include mq(extra-large) {
+      font-size: 3.4rem;
+    }
+  }
+
+  &__text {
+    padding-block: 1rem 2.4rem;
+  }
+}

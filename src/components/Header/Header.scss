@@ -1,0 +1,116 @@
+@use "../../scss/abstracts" as *;
+
+.header {
+  background-color: $white;
+  padding: 1.2rem;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+
+  @include mq(large) {
+    padding: 1.2rem 3.3rem;
+  }
+
+  &__navbar {
+    @include flex(space-between, center);
+
+    @include mq(large) {
+      justify-content: space-around;
+    }
+  }
+
+  &__hamburger {
+    padding-top: 0.25rem;
+    border: none;
+    background-color: transparent;
+
+    @include mq(large) {
+      display: none;
+    }
+  }
+
+  &__span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: $dark-blue;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  &__link {
+    color: $dark-blue;
+    padding-block: 0.35rem;
+    position: relative;
+    @include transition(color);
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 0.3125rem;
+      inset: 3.15rem 0 0 0;
+      background: $gradient;
+      position: absolute;
+      transform: scaleX(0);
+      transform-origin: center;
+      @include transition(all);
+    }
+
+    @include mq(large) {
+      color: $grayish-blue;
+      margin-inline: 0.7rem;
+
+      &:hover {
+        color: $dark-blue;
+
+        &::after {
+          transform: scaleX(1.1);
+        }
+      }
+    }
+  }
+
+  &__list {
+    font-size: 1.2rem;
+    background-color: $white;
+    border-radius: 0.2rem;
+    padding: 1rem 1rem 1.5rem;
+    position: absolute;
+    left: 1.5rem;
+    width: calc(100vw - 3.1rem);
+    top: -30rem;
+    z-index: 2;
+    transition: top 0.8s ease-in-out;
+
+    @include mq(large) {
+      font-size: 1rem;
+      padding: 0 0 0 1.2rem;
+      width: auto;
+      position: static;
+      @include flex(space-between, center);
+    }
+
+    &--open {
+      top: 5.5rem;
+    }
+  }
+}
+
+.overlay {
+  background: $gradient2;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 1;
+  display: none;
+  transition: opacity 1s ease-in-out;
+
+  &--visible {
+    display: block;
+  }
+}

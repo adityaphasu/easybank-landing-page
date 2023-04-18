@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+
+$font-family: "Public Sans", sans-serif;
+$font-size: 0.9rem;
+$font-size2: 1.125rem;
+$font-size3: 2.4rem;
+$fw-300: 300;
+$fw-400: 400;
+$fw-700: 700;
+
+// COLORS
+
+$dark-blue: hsl(233, 26%, 24%);
+$lime-green: hsl(136, 65%, 51%);
+$bright-cyan: hsl(192, 70%, 51%);
+$grayish-blue: hsl(233, 8%, 62%);
+$light-grayish-blue: hsl(220, 16%, 96%);
+$very-light-gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+$gradient: linear-gradient(to right, $lime-green, $bright-cyan);
+$gradient2: linear-gradient(hsla(233, 26%, 24%, 0.591), hsla(0, 0%, 0%, 0));
+
+// Breakpoints
+
+$breakpoints: (
+  "small": 29rem,
+  "medium": 48rem,
+  "large": 64rem,
+  "extra-large": 90rem,
+);

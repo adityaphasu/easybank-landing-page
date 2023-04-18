@@ -1,0 +1,70 @@
+@use "../../scss/abstracts" as *;
+
+.footer {
+  padding: 2.5rem 1rem 0;
+  background-color: $dark-blue;
+  color: $white;
+
+  @include mq(large) {
+    font-size: $font-size;
+    @include grid(3, 1fr, 0);
+    justify-items: center;
+    align-items: start;
+
+    &__navbar {
+      justify-self: start;
+    }
+
+    &__list {
+      @include grid(2, 1fr, 0.5rem);
+      column-gap: 5rem;
+      grid-template-rows: repeat(3, 1fr);
+      grid-auto-flow: column;
+    }
+  }
+
+  &__logo {
+    @include margin-auto;
+
+    @include mq(large) {
+      padding: 0.5rem 0.5rem 0 0;
+    }
+  }
+
+  &__socials {
+    padding-block: 2rem;
+    @include flex(center, center);
+
+    @include mq(large) {
+      padding-block: 3.5rem;
+    }
+  }
+
+  &__social {
+    margin-inline: 0.3rem;
+
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(98%) sepia(77%) saturate(6807%) hue-rotate(59deg)
+        brightness(87%) contrast(87%);
+    }
+  }
+
+  &__item {
+    padding-block: 0.22rem;
+    @include hover-color;
+  }
+
+  &__container {
+    padding-block: 2.5rem;
+
+    @include mq(large) {
+      text-align: center;
+      padding-block: 1.3rem 0;
+    }
+  }
+
+  &__copyright {
+    color: $grayish-blue;
+    padding-top: 2rem;
+  }
+}

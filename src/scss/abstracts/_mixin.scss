@@ -1,0 +1,41 @@
+@use "./variables" as *;
+
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin grid($coulmn, $value, $gap) {
+  display: grid;
+  grid-template-columns: repeat($coulmn, $value);
+  gap: $gap;
+}
+
+@mixin transition($property) {
+  transition: $property 0.5s ease-in-out;
+}
+
+@mixin hover-color {
+  @include transition(color);
+
+  &:hover {
+    color: $lime-green;
+  }
+}
+
+@mixin margin-auto {
+  margin: 0 auto;
+
+  @include mq(large) {
+    margin: 0;
+  }
+}
+
+@mixin mq($key) {
+  $size: map-get($breakpoints, $key);
+
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}

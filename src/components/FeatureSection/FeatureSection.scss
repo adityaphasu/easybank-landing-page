@@ -1,0 +1,62 @@
+@use "../../scss/abstracts" as *;
+
+.feature {
+  background-color: $light-grayish-blue;
+  padding: 4rem 1.5rem;
+
+  @include mq(large) {
+    padding: 7rem 4rem 4.5rem;
+  }
+
+  @include mq(extra-large) {
+    padding: 7rem 10.5rem 4.5rem;
+  }
+
+  &__heading {
+    font-size: 1.9rem;
+
+    @include mq(extra-large) {
+      font-size: $font-size3;
+    }
+  }
+
+  &__text {
+    padding-block: 0.8rem;
+
+    @include mq(large) {
+      width: 40rem;
+      padding-block: 1rem;
+    }
+  }
+
+  &__container {
+    padding-block: 1.8rem 0;
+
+    @include mq(large) {
+      font-size: 0.959rem;
+      @include grid(4, 1fr, 1.49rem);
+    }
+  }
+
+  &__item {
+    padding-block: 0.9rem;
+
+    @include mq(large) {
+      padding-block: 1.5rem;
+    }
+  }
+
+  &__icon {
+    @include margin-auto;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    padding-block: 1.38rem;
+
+    @include mq(large) {
+      font-size: 1.4375rem;
+      padding-block: 2.5rem 1.4rem;
+    }
+  }
+}
