@@ -9,6 +9,7 @@ export default function Header() {
   const handleMenuClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   return (
     <>
       <div className={`overlay ${isMenuOpen ? "overlay--visible" : ""}`} />
@@ -17,7 +18,10 @@ export default function Header() {
           <a href="#" aria-label="Easybank">
             <img src={Logo} alt="Easybank" />
           </a>
-          <button aria-label="Menu Button" className="header__hamburger" onClick={handleMenuClick}>
+          <button
+            aria-label="Menu Button"
+            className={`header__hamburger ${isMenuOpen ? "header__hamburger--active" : ""}`}
+            onClick={handleMenuClick}>
             <span className="header__span"></span>
             <span className="header__span"></span>
             <span className="header__span"></span>
