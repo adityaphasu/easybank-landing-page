@@ -35,12 +35,16 @@
     overflow: hidden;
     text-align: left;
     color: $grayish-blue;
+    @include transition(all);
 
     @include mq(large) {
       margin-block: 3rem 1.5rem;
     }
 
     &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 2rem 0 $transparent-dark-blue;
+
       .article-section__title {
         color: $lime-green;
       }
