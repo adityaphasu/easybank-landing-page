@@ -1,5 +1,9 @@
 import React from "react";
 import "./ArticleSection.scss";
+import Currency from "../../assets/images/image-currency.jpg";
+import Restaurant from "../../assets/images/image-restaurant.jpg";
+import Plane from "../../assets/images/image-plane.jpg";
+import Confetti from "../../assets/images/image-confetti.jpg";
 
 const articles = [
   {
@@ -8,7 +12,7 @@ const articles = [
     title: "Receive money in any currency with no fees",
     content:
       "The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …",
-    image: `url("/src/assets/images/image-currency.jpg")`,
+    image: `url(${Currency})`,
   },
   {
     id: 2,
@@ -16,7 +20,7 @@ const articles = [
     title: "Treat yourself without worrying about money",
     content:
       "Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you …",
-    image: `url("/src/assets/images/image-restaurant.jpg")`,
+    image: `url(${Restaurant})`,
   },
   {
     id: 3,
@@ -24,7 +28,7 @@ const articles = [
     title: "Take your Easybank card wherever you go",
     content:
       "  We want you to enjoy your travels. This is why we don’t charge any fees on purchases  while you’re abroad. We’ll even show you …",
-    image: `url("/src/assets/images/image-plane.jpg")`,
+    image: `url(${Plane})`,
   },
   {
     id: 4,
@@ -32,7 +36,7 @@ const articles = [
     title: "Our invite-only Beta accounts are now live!",
     content:
       "  After a lot of hard work by the whole team, we’re excited to launch our closed beta. It’s easy to request an invite through the site ...",
-    image: `url("/src/assets/images/image-confetti.jpg")`,
+    image: `url(${Confetti})`,
   },
 ];
 
